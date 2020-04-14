@@ -1,5 +1,7 @@
 import { hello, add, removeSNames } from '../src/App';
 
+const hi = () => 'Hi there!';
+
 describe('Testing App.js', () => {
   test('Should exist a function hello()', () => {
     expect(hello()).toBeTruthy;
@@ -8,7 +10,7 @@ describe('Testing App.js', () => {
 
 describe('add', () => {
   it('should add two numbers', () => {
-    expect(add(1, 2)).toBe(3);
+    expect(add(0, 2)).toBe(2);
     expect(add(2, 2)).toBe(4);
     expect(add(12, 2)).toBe(14);
     expect(add(-2, 2)).toBe(0);
@@ -42,3 +44,16 @@ describe('removeSNames', () => {
     expect(removeSNames(names)).not.toContain('scott');
   });
 });
+
+describe('Test mock', () => {
+  test('should to call a mock', () => {
+    const hiTest = jest.fn();
+    hiTest('hi');
+    expect(hiTest).toHaveBeenCalledWith('hi');
+  });
+  test('should to call a mock with a implementation', () => {
+    const foo = jest.fn().mockImplementation( () => 'bar');
+    const bar = foo();
+    expect(bar).toBe('bar');
+  }); 
+})

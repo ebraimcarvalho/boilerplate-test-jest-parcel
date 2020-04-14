@@ -7,8 +7,8 @@ https://www.leveluptutorials.com/store
 ## How To Use
 
 ```
-git clone https://github.com/leveluptuts/Level-Up-JavaScript-Testing-101.git
-cd Level-Up-JavaScript-Testing-101
+git clone https://github.com/ebraimcarvalho/boilerplate-test-jest-parcel.git
+cd boilerplate-test-jest-parcel
 npm install
 npm test
 ```
